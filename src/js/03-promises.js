@@ -43,7 +43,7 @@ function createPromises(event) {
   const step = Number(form.elements.step.value);
   const amount = Number(form.elements.amount.value);
 
-  for (let i = 0; i <= amount; i += 1) {
+  for (let i = 1; i <= amount; i += 1) {
     createPromise(i, delay)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
